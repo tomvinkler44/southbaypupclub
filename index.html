@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>South Bay Pup Club — Private Dog Walking, Sitting & Boarding in the South Bay</title>
+<meta name="description" content="One-on-one dog walking, drop-ins, daycare, dog sitting and boarding in Santa Clara, Sunnyvale, Cupertino, Campbell, Mountain View, Los Altos and Palo Alto. One walker, one household at a time. Private walks from $40.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta property="og:title" content="South Bay Pup Club — Private, one-on-one dog care in the South Bay">
+<meta property="og:description" content="No pack walks, no rotating strangers. Just me and your dog, every visit.">
+<meta property="og:image" content="https://southbaypupclub.com/images/park.jpg">
+<link rel="canonical" href="https://southbaypupclub.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF7F0; --paper:#FFFFFF; --sand:#F1E8DA; --ink:#1E2638; --ink-soft:#4A5366;
+    --blue:#2C68D1; --blue-dark:#1F4FA6; --cocoa:#6B3A22; --caramel:#C98A4B; --line:#E4D9C8;
+    --radius:18px; --max:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden}
+  body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--caramel)}
+  .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;font-size:16px;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--blue-dark);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:#fff}
+  section{padding:96px 0}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Fraunces",serif;font-weight:700;font-size:24px}
+  .logo img{width:40px;height:40px;object-fit:contain}
+  .nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+  .nav ul a{text-decoration:none;font-weight:500;color:var(--ink-soft)}
+  .nav ul a:hover{color:var(--ink)}
+  .nav .btn{padding:10px 20px;font-size:15px;color:#fff}
+  .menu-toggle{display:none;background:none;border:0;font-size:26px;cursor:pointer;color:var(--ink)}
+
+  /* hero */
+  .hero{padding:72px 0 88px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(44px,6vw,72px);margin:16px 0 22px}
+  .hero h1 em{font-style:italic;color:var(--blue)}
+  .hero p.lead{font-size:20px;color:var(--ink-soft);max-width:520px;margin-bottom:32px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .from{margin-top:22px;font-size:15px;color:var(--ink-soft)}
+  .from strong{color:var(--ink)}
+  .hero-photo{position:relative}
+  .hero-photo img.main{border-radius:28px;aspect-ratio:4/4.3;object-fit:cover;object-position:35% center;width:100%;box-shadow:0 30px 60px -30px rgba(30,38,56,.45)}
+  .hero-photo .badge{position:absolute;left:-28px;bottom:32px;background:var(--paper);border-radius:16px;padding:14px 18px;box-shadow:0 14px 34px -14px rgba(30,38,56,.35);display:flex;gap:12px;align-items:center;max-width:270px}
+  .badge .dot{width:12px;height:12px;border-radius:50%;background:#2BA36B;flex:none;box-shadow:0 0 0 4px rgba(43,163,107,.18)}
+  .badge p{font-size:14px;line-height:1.35}
+  .hero-photo img.mascot{position:absolute;right:-26px;top:-40px;width:150px;transform:rotate(6deg)}
+
+  /* promise strip */
+  .promise{background:var(--ink);color:#fff;padding:34px 0}
+  .promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .promise h4{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin-bottom:4px}
+  .promise p{font-size:14px;color:#C9CEDA}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .about-inner{max-width:760px}
+  .about h2{font-size:clamp(34px,4vw,48px);margin:12px 0 22px}
+  .about p{color:var(--ink-soft);margin-bottom:16px}
+  .sig{font-family:"Fraunces",serif;font-style:italic;font-size:26px;color:var(--ink);margin-top:8px}
+  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .creds span{background:var(--sand);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500}
+
+  /* services */
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(34px,4vw,48px);margin:12px 0 14px}
+  .section-head p{color:var(--ink-soft)}
+  .services{background:var(--paper)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:var(--cream);display:flex;flex-direction:column}
+  .svc .icon{font-size:30px;margin-bottom:14px}
+  .svc h3{font-size:25px;margin-bottom:8px}
+  .svc p{color:var(--ink-soft);font-size:15.5px;flex:1}
+  .svc .price{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-size:15px;color:var(--ink-soft)}
+  .svc .price b{font-family:"Fraunces",serif;font-size:30px;color:var(--ink);font-weight:700}
+  .svc.feature{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .svc.feature p,.svc.feature .price{color:#C9CEDA}
+  .svc.feature .price b{color:#fff}
+  .svc.feature .price{border-top-color:#3A445A}
+  .svc.cocoa{background:var(--sand);border:0;align-items:center;justify-content:center;text-align:center}
+  .svc.cocoa img{width:170px;margin-bottom:12px}
+  .svc.cocoa p{flex:none;font-family:"Fraunces",serif;font-style:italic;font-size:20px;color:var(--cocoa)}
+
+  /* pricing */
+  .pricing-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+  table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+  th,td{text-align:left;padding:15px 20px;border-bottom:1px solid var(--line);font-size:16px}
+  th{background:var(--sand);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+  td.amt{text-align:right;font-weight:700;white-space:nowrap}
+  tr.group td{background:#FAF4EA;font-family:"Fraunces",serif;font-weight:600;font-size:18px;padding-top:18px}
+  tr:last-child td{border-bottom:0}
+  .side-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:20px}
+  .side-card h3{font-size:22px;margin-bottom:12px}
+  .side-card ul{list-style:none}
+  .side-card li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+  .side-card li:last-child{border-bottom:0}
+  .side-card li b{white-space:nowrap}
+  .side-card.blue{background:var(--blue);color:#fff;border:0}
+  .side-card.blue p{color:#E2EAFB;font-size:15.5px;margin-bottom:18px}
+  .side-card.blue .btn{background:#fff;color:var(--blue)}
+  .fine{font-size:13.5px;color:var(--ink-soft);margin-top:14px}
+
+  /* how */
+  .how{background:var(--paper)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  .step{padding:30px;border-radius:var(--radius);background:var(--cream);border:1px solid var(--line)}
+  .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;font-family:"Fraunces",serif;font-weight:700;font-size:20px;margin-bottom:18px}
+  .step h3{font-size:23px;margin-bottom:8px}
+  .step p{color:var(--ink-soft);font-size:15.5px}
+
+  /* compare */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);margin-top:56px}
+  .compare>div{padding:30px}
+  .compare .them{background:var(--sand)}
+  .compare .us{background:var(--ink);color:#fff}
+  .compare h4{font-family:"Fraunces",serif;font-size:21px;margin-bottom:12px;font-weight:600}
+  .compare ul{list-style:none}
+  .compare li{padding:7px 0 7px 28px;position:relative;font-size:15.5px}
+  .compare .them li::before{content:"✕";position:absolute;left:0;color:#A0674A}
+  .compare .us li::before{content:"✓";position:absolute;left:0;color:#7FB2FF;font-weight:700}
+
+  /* area */
+  .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  [class$="-grid"]>*{min-width:0}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .chips span{border:1.5px solid var(--ink);border-radius:999px;padding:8px 16px;font-weight:500;font-size:15px}
+
+  /* faq */
+  .faq{background:var(--paper)}
+  .faq-list{max-width:780px}
+  details{border-bottom:1px solid var(--line);padding:20px 0}
+  summary{cursor:pointer;font-family:"Fraunces",serif;font-size:21px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:26px;color:var(--blue);line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--ink-soft);margin-top:12px;max-width:680px}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .contact h2{font-size:clamp(34px,4vw,48px);margin:12px 0 16px}
+  .me{display:flex;align-items:center;gap:18px;margin-top:30px}
+  .me img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 30%;border:4px solid var(--paper);box-shadow:0 10px 24px -12px rgba(30,38,56,.4)}
+  .me figcaption{font-family:"Fraunces",serif;font-size:22px;font-style:italic}
+  .me figcaption span{font-size:17px;color:var(--ink-soft)}
+  .contact .direct{margin-top:28px;display:grid;gap:10px}
+  .contact .direct a{font-weight:700;font-size:18px;text-decoration:none}
+  .contact .direct a:hover{color:var(--blue)}
+  form{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;gap:16px;grid-template-columns:1fr 1fr}
+  form .full{grid-column:1/-1}
+  label{font-size:14px;font-weight:700;display:block;margin-bottom:6px}
+  input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+  textarea{min-height:110px;resize:vertical}
+  .checks{display:flex;flex-wrap:wrap;gap:8px}
+  .checks label{font-weight:500;display:flex;align-items:center;gap:7px;background:var(--cream);border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;margin:0;cursor:pointer}
+  .checks input{width:auto}
+  .form-note{font-size:13.5px;color:var(--ink-soft)}
+
+  footer{background:var(--ink);color:#C9CEDA;padding:48px 0;font-size:15px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .foot .logo{color:#fff}
+  .foot a{color:#fff;text-decoration:none}
+
+  @media (max-width:900px){
+    section{padding:72px 0}
+    .hero-grid,.pricing-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .svc-grid,.steps{grid-template-columns:1fr 1fr}
+    .promise-grid{grid-template-columns:1fr 1fr}
+    .hero-photo .badge{left:12px}
+    .hero-photo img.mascot{right:-6px;width:110px}
+    .nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line);align-items:flex-start}
+    .nav ul.open{display:flex}
+    .menu-toggle{display:block}
+  }
+  @media (max-width:600px){
+    body{font-size:16px}
+    .svc-grid,.steps,.compare,form{grid-template-columns:1fr}
+    .promise-grid{grid-template-columns:1fr}
+    th,td{padding:12px 14px;font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="logo"><img src="images/mascot.png" alt="">South Bay Pup Club</a>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul id="menu" onclick="if(event.target.tagName==='A')this.classList.remove('open')">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn">Book a meet &amp; greet</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Private dog care · South Bay</span>
+        <h1>One walker.<br>One dog.<br><em>Your</em> dog.</h1>
+        <p class="lead">One-on-one dog walking, sitting and boarding. No pack walks and no rotating strangers. I do every visit myself, with my full attention on your dog.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn">Book a free meet &amp; greet</a>
+          <a href="#pricing" class="btn ghost">See pricing</a>
+        </div>
+        <p class="from">Private walks from <strong>$40</strong> · Boarding from <strong>$95/night</strong></p>
+      </div>
+      <div class="hero-photo">
+        <img class="main" src="images/park.jpg" alt="Tom kneeling with a happy tan dog at a fenced dog park">
+        <img class="mascot" src="images/mascot.png" alt="Cocoa, the South Bay Pup Club mascot, carrying a blue leash">
+        <div class="badge"><span class="dot"></span><p><b>Taking a few new clients</b><br>I keep my roster small on purpose.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <div class="promise">
+    <div class="wrap promise-grid">
+      <div><h4>One household at a time</h4><p>Your dog is never part of a pack.</p></div>
+      <div><h4>The same face, every visit</h4><p>No subs and no strangers with your key.</p></div>
+      <div><h4>Photos &amp; notes</h4><p>A photo and quick report after every visit.</p></div>
+      <div><h4>Pet CPR certified</h4><p>Trained in pet CPR &amp; first aid.</p></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap about-inner">
+      <div>
+        <span class="eyebrow">Hi, I'm Tom</span>
+        <h2>Why South Bay Pup Club is just me</h2>
+        <p>Most dog-walking companies grow by adding walkers and dogs to every walk. Your dog ends up in a pack of six, with a different person at the door every few weeks.</p>
+        <p>I went the other way. South Bay Pup Club is just me, and I care for one household's dogs at a time. I learn your dog's quirks: the corner they're nervous about, the treat that works, how they like their belly rubbed. You get one person who knows your dog and answers your texts.</p>
+        <p>Because I do every visit myself, I take on a limited number of families. If we're a fit, your dog gets my whole attention.</p>
+        <p class="sig">— Tom</p>
+        <div class="creds">
+          <span>🐾 Pet CPR &amp; First Aid</span>
+          <span>📍 Local to the South Bay</span>
+          <span>🦴 Positive reinforcement only</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Services</span>
+        <h2>Everything your dog needs, from one person they trust</h2>
+        <p>Every service is private and done by me, with prices listed up front.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc feature">
+          <div class="icon">🦮</div>
+          <h3>Private Dog Walks</h3>
+          <p>One-on-one walks around your neighborhood or a nearby park, paced for your dog. I include fresh water, a towel-off and a report every time.</p>
+          <div class="price">from <b>$40</b> / 30 min</div>
+        </article>
+        <article class="svc">
+          <div class="icon">🏠</div>
+          <h3>Drop-In Visits</h3>
+          <p>Potty breaks, meals, meds and cuddles at home. A good fit for puppies, seniors and long workdays.</p>
+          <div class="price">from <b>$30</b> / visit</div>
+        </article>
+        <article class="svc">
+          <div class="icon">☀️</div>
+          <h3>Doggy Daycare</h3>
+          <p>A day at my place with walks, play, naps and enrichment. I take two dogs at most, and only dogs who get along.</p>
+          <div class="price">from <b>$75</b> / day</div>
+        </article>
+        <article class="svc">
+          <div class="icon">🌙</div>
+          <h3>Dog Sitting</h3>
+          <p>I stay overnight in your home so your dog keeps their routine and their own bed. Walks and mail are included.</p>
+          <div class="price">from <b>$120</b> / night</div>
+        </article>
+        <article class="svc">
+          <div class="icon">🛏️</div>
+          <h3>Boarding</h3>
+          <p>Your dog stays with me as part of the family. I board one family's dogs at a time, so there are no strangers and no kennels.</p>
+          <div class="price">from <b>$95</b> / night</div>
+        </article>
+        <article class="svc cocoa">
+          <img src="images/mascot.png" alt="Cocoa the mascot">
+          <p>"Leash in mouth, ready to go!"<br><span style="font-size:15px;font-style:normal;font-family:'DM Sans'">— Cocoa, Chief Wag Officer</span></p>
+        </article>
+      </div>
+
+      <div class="compare">
+        <div class="them">
+          <h4>Big walking companies &amp; apps</h4>
+          <ul>
+            <li>Group walks of 4–8 dogs</li>
+            <li>Whoever's available that day</li>
+            <li>Rushed visits between dozens of stops</li>
+            <li>Call center or app support</li>
+          </ul>
+        </div>
+        <div class="us">
+          <h4>South Bay Pup Club</h4>
+          <ul>
+            <li>Private walks, one household at a time</li>
+            <li>Me, every single visit</li>
+            <li>Unhurried visits on a small roster</li>
+            <li>Text me directly and get a real answer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Pricing</span>
+        <h2>Prices listed up front</h2>
+        <p>Prices are for one dog. Every walk and visit is private, so there's no group rate.</p>
+      </div>
+      <div class="pricing-grid">
+        <table>
+          <thead><tr><th>Service</th><th style="text-align:right">Price</th></tr></thead>
+          <tbody>
+            <tr class="group"><td colspan="2">Private Dog Walks</td></tr>
+            <tr><td>30-minute walk</td><td class="amt">$40</td></tr>
+            <tr><td>45-minute walk</td><td class="amt">$50</td></tr>
+            <tr><td>60-minute walk</td><td class="amt">$60</td></tr>
+            <tr class="group"><td colspan="2">Drop-In Visits</td></tr>
+            <tr><td>20-minute visit (potty break, feeding)</td><td class="amt">$30</td></tr>
+            <tr><td>40-minute visit (short walk, play, meds)</td><td class="amt">$40</td></tr>
+            <tr class="group"><td colspan="2">Doggy Daycare <span style="font-family:'DM Sans';font-weight:400;font-size:14px;color:var(--ink-soft)">(at my home)</span></td></tr>
+            <tr><td>Half day (up to 5 hours)</td><td class="amt">$50</td></tr>
+            <tr><td>Full day (up to 10 hours)</td><td class="amt">$75</td></tr>
+            <tr class="group"><td colspan="2">Overnight Care</td></tr>
+            <tr><td>Dog sitting in your home (per night, includes walks)</td><td class="amt">$120</td></tr>
+            <tr><td>Boarding at my home (per night)</td><td class="amt">$95</td></tr>
+          </tbody>
+        </table>
+        <div>
+          <div class="side-card">
+            <h3>Add-ons &amp; extras</h3>
+            <ul>
+              <li><span>Additional dog, same household</span><b>+$15 / visit</b></li>
+              <li><span>Additional dog, overnight</span><b>+$40 / night</b></li>
+              <li><span>Early (before 7am) or late (after 8pm)</span><b>+$10</b></li>
+              <li><span>Holidays</span><b>+$25</b></li>
+              <li><span>Same-day booking</span><b>+$10</b></li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>Regulars save</h3>
+            <ul>
+              <li><span>Walks 3+ days a week</span><b>10% off</b></li>
+              <li><span>Walks 5 days a week</span><b>15% off</b></li>
+              <li><span>Boarding or sitting 7+ nights</span><b>10% off</b></li>
+            </ul>
+          </div>
+          <div class="side-card blue">
+            <h3>Start with a free meet &amp; greet</h3>
+            <p>I come to you, meet your dog, and we go over routines, quirks and keys. There's no obligation.</p>
+            <a href="#contact" class="btn">Book a meet &amp; greet</a>
+          </div>
+        </div>
+      </div>
+      <p class="fine">No cancellation fees. I accept Venmo, Zelle, Apple Pay or cash.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Getting started is easy</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Free meet &amp; greet</h3><p>I come to your home and meet your dog. We talk through schedule, routines and any special needs.</p></div>
+        <div class="step"><h3>A first visit</h3><p>We start with a single walk or drop-in so your dog gets comfortable with me. You get photos and a full report.</p></div>
+        <div class="step"><h3>Your routine</h3><p>We set a regular schedule or you book as needed. Either way, it's me who shows up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  TESTIMONIALS — add real client reviews here once you have them.
+  <section>
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">Kind words</span><h2>From the humans</h2></div>
+      <blockquote>"Real quote from a real client." — First name, neighborhood</blockquote>
+    </div>
+  </section>
+  -->
+
+  <!-- SERVICE AREA -->
+  <section>
+    <div class="wrap area-grid">
+      <div>
+        <span class="eyebrow">Service area</span>
+        <h2 style="font-size:clamp(34px,4vw,48px);margin:12px 0 16px">Close to home on purpose</h2>
+        <p style="color:var(--ink-soft)">I keep my area to a handful of nearby cities so I'm always on time and never rushing between visits. If you're just outside it, ask. I can sometimes make it work.</p>
+        <div class="chips">
+          <span>Santa Clara</span><span>Sunnyvale</span><span>Cupertino</span><span>Campbell</span><span>Mountain View</span><span>Los Altos</span><span>Palo Alto</span>
+        </div>
+      </div>
+      <img src="images/mascot.png" alt="Cocoa the mascot, ready for a walk" style="max-width:380px;margin:0 auto">
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Good questions</h2></div>
+      <div class="faq-list">
+        <details><summary>Will it really always be you?</summary><p>Yes. South Bay Pup Club is me, with no staff and no subcontractors. If I'm ever sick or away, I'll tell you well in advance and won't send a stranger.</p></details>
+        <details><summary>Do you walk dogs together?</summary><p>No. Every walk is private: one household's dogs at a time. If you have two dogs, they walk together with me (+$15).</p></details>
+        <details><summary>How does boarding work?</summary><p>Your dog stays in my home and sleeps indoors, never in a kennel. I board one family at a time, so your dog won't share space with strange dogs. I send daily photos and updates.</p></details>
+        <details><summary>Can you handle puppies, seniors or reactive dogs?</summary><p>Yes, and private care suits them best. Tell me about your dog at the meet &amp; greet and I'll adapt the walk, pace and route.</p></details>
+        <details><summary>What if I need to cancel?</summary><p>Just let me know as early as you can. I don't charge cancellation fees.</p></details>
+        <details><summary>How do I pay?</summary><p>I invoice weekly for regular walks and up front for overnight stays. I accept Venmo, Zelle, Apple Pay or cash.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Book a meet &amp; greet</span>
+        <h2>Let's meet your dog</h2>
+        <p style="color:var(--ink-soft)">Tell me a bit about your pup and what you need. I reply within a few hours, usually faster.</p>
+        <figure class="me">
+          <img src="images/portrait.jpg" alt="Tom hugging a golden retriever in a sunny park">
+          <figcaption>Talk soon!<br><span>— Tom</span></figcaption>
+        </figure>
+        <div class="direct">
+          <a href="sms:+14157136546">💬 Text (415) 713-6546</a>
+          <a href="tel:+14157136546">📞 Call (415) 713-6546</a>
+          <a href="mailto:vinkler@gmail.com">✉️ vinkler@gmail.com</a>
+        </div>
+      </div>
+      <!-- Sends to vinkler@gmail.com via FormSubmit. The first submission triggers a one-time activation email. -->
+      <form action="https://formsubmit.co/vinkler@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New South Bay Pup Club request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://southbaypupclub.com/#thanks">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div><label for="name">Your name</label><input id="name" name="name" required></div>
+        <div><label for="email">Email</label><input id="email" type="email" name="email" required></div>
+        <div><label for="phone">Phone</label><input id="phone" type="tel" name="phone"></div>
+        <div><label for="hood">City</label><input id="hood" name="city"></div>
+        <div class="full"><label for="dog">Dog's name, breed &amp; age</label><input id="dog" name="dog"></div>
+        <div class="full">
+          <label>I'm interested in</label>
+          <div class="checks">
+            <label><input type="checkbox" name="services" value="Walks"> Walks</label>
+            <label><input type="checkbox" name="services" value="Drop-ins"> Drop-ins</label>
+            <label><input type="checkbox" name="services" value="Daycare"> Daycare</label>
+            <label><input type="checkbox" name="services" value="Dog sitting"> Dog sitting</label>
+            <label><input type="checkbox" name="services" value="Boarding"> Boarding</label>
+          </div>
+        </div>
+        <div class="full"><label for="msg">Anything else?</label><textarea id="msg" name="message" placeholder="Schedule, dates, quirks, favorite treats…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send request</button> <span class="form-note">&nbsp;No spam, ever.</span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="logo"><img src="images/mascot.png" alt="">South Bay Pup Club</a>
+    <p>Private dog care in the South Bay · <a href="tel:+14157136546">(415) 713-6546</a> · <a href="mailto:vinkler@gmail.com">vinkler@gmail.com</a></p>
+    <p>© <span id="yr">2026</span> South Bay Pup Club</p>
+  </div>
+</footer>
+<div id="thanks-msg" style="display:none;position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1E2638;color:#fff;padding:16px 22px;border-radius:14px;box-shadow:0 14px 34px -10px rgba(0,0,0,.4);z-index:99;font-weight:500">🐾 Thanks! Your request was sent. I'll get back to you soon. — Tom</div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+if(location.hash==='#thanks'){var t=document.getElementById('thanks-msg');t.style.display='block';setTimeout(function(){t.style.display='none'},7000)}
+</script>
+</body>
+</html>
